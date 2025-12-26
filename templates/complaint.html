@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raise a Complaint</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="header">
+    Smart City Public Issue Reporting System
+</header>
+
+<div class="container">
+    <h2>Raise a Complaint</h2>
+
+    <form method="POST" action="/submit">
+
+        <label>State</label>
+        <input type="text" name="state" placeholder="Enter your State" required>
+
+        <label>District</label>
+        <input type="text" name="district" placeholder="Enter your District" required>
+
+        <label>City / Town / Village</label>
+        <input type="text" name="city" required>
+
+        <label>Street Name</label>
+        <input type="text" name="street" required>
+
+        <label>Issue Type</label>
+        <select name="issue" required>
+            <option>Street Light Not Working</option>
+            <option>Garbage Overflow</option>
+            <option>Water Leakage</option>
+            <option>Road Damage</option>
+            <option>Drainage Issue</option>
+            <option>Public Safety</option>
+            <option>Other</option>
+        </select>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+</div>
+
+<footer>
+    © 2025 Smart City Initiative | Public Grievance Portal
+</footer>
+
+</body>
+</html>
